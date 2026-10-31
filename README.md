@@ -1,10 +1,10 @@
 # GetThatVideo — YouTube Video & MP3 Downloader (Kotlin Multiplatform)
 
-Aplicativo multiplataforma desenvolvido em **Kotlin Multiplatform (Compose Multiplatform)** com backend em **Python (Flask + Pytubefix + FFmpeg)**, construído com base no repositório [`zararashraf/youtube-video-downloader-api`](https://github.com/zararashraf/youtube-video-downloader-api).
+Aplicativo multiplataforma desenvolvido em **Kotlin Multiplatform (Compose Multiplatform)** com backend em **Python (Flask + Pytubefix + FFmpeg)**, construído com base no repositório [`zararashraf/youtube-video-downloader-api`](https://github.com/zararashraf/youtube-video-downloader-api). A proposta do aplicativo é aprender a estrutura de Kotlin Multiplataform com um exemplo real, sinta-se livre para editar e testar o projeto
 
 ---
 
-## ✨ Funcionalidades Implementadas
+## Funcionalidades Implementadas
 
 1. **Inserir a URL de um vídeo do YouTube**:
    - Suporte a links padrão (`youtube.com/watch?v=...`), encurtados (`youtu.be/...`), `Shorts` e `YouTube Music`.
@@ -23,47 +23,7 @@ Aplicativo multiplataforma desenvolvido em **Kotlin Multiplatform (Compose Multi
 
 ---
 
-## 🗂️ Estrutura do Projeto (Guia de Estudos)
-
-O projeto foi organizado de forma modular e comentada em português para facilitar a leitura e edição do código:
-
-```text
-GetThatVideo/
-├── backend/
-│   ├── main.py                  # API Flask baseada em zararashraf/youtube-video-downloader-api
-│   └── requirements.txt         # Dependências Python (flask, pytubefix)
-├── composeApp/
-│   ├── build.gradle.kts         # Configuração dos alvos KMP (Desktop JVM, Android, iOS)
-│   └── src/
-│       ├── commonMain/kotlin/com/gtv/app/
-│       │   ├── model/
-│       │   │   └── VideoModels.kt         # Modelos de domínio (ExtractionFormat, QualityOption, VideoInfo...)
-│       │   ├── network/
-│       │   │   ├── SimpleJson.kt          # Parser e serializador JSON multiplataforma puro
-│       │   │   └── YoutubeApiClient.kt    # Cliente HTTP que consome os endpoints da API Flask
-│       │   ├── platform/
-│       │   │   └── PlatformServices.kt    # Declarações `expect` (seletor de pastas, HTTP, auto-start da API)
-│       │   ├── viewmodel/
-│       │   │   └── DownloaderViewModel.kt # Estado reativo (StateFlow) e regras de negócio (MVVM)
-│       │   └── ui/
-│       │       ├── Theme.kt               # Paleta de cores Material 3 (Modo Escuro e Claro)
-│       │       └── App.kt                 # Interface gráfica compartilhada em Compose Multiplatform
-│       ├── jvmMain/kotlin/com/gtv/app/
-│       │   ├── main.kt                    # Ponto de entrada Desktop (Window)
-│       │   └── platform/PlatformServices.jvm.kt     # Implementações `actual` para Desktop (JFileChooser, auto-start Python)
-│       ├── androidMain/kotlin/com/gtv/app/
-│       │   ├── MainActivity.kt            # Ponto de entrada Android
-│       │   └── platform/PlatformServices.android.kt # Implementações `actual` para Android
-│       └── iosMain/kotlin/com/gtv/app/
-│           ├── MainViewController.kt      # Ponto de entrada iOS
-│           └── platform/PlatformServices.ios.kt     # Implementações `actual` para iOS
-├── run-backend.bat              # Atalho para iniciar apenas o servidor Python Flask
-└── run-desktop.bat              # Atalho para compilar e abrir o aplicativo Desktop
-```
-
----
-
-## 🚀 Como Executar e Editar
+## Como executar e editar
 
 ### 1. Executar o Aplicativo Desktop (JVM)
 No Desktop, o próprio aplicativo Kotlin Multiplatform **inicia automaticamente** o servidor Python `backend/main.py` em segundo plano caso ele ainda não esteja rodando!
