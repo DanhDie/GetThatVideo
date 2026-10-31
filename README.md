@@ -33,15 +33,10 @@ Basta rodar pelo terminal (ou dar dois cliques em `run-desktop.bat`):
 .\gradlew.bat :composeApp:run
 ```
 
-Se preferir rodar o servidor Python separadamente em outro terminal para ver os logs da API Flask:
-```powershell
-python backend/main.py
-```
-
 ### 2. Abrir para Edição no Android Studio / IntelliJ IDEA
 1. Abra o **Android Studio** ou **IntelliJ IDEA**.
-2. Clique em **Open** e selecione a pasta `C:\Users\Daniel\Documents\GTV\GetThatVideo`.
-3. O Gradle já está pré-configurado em `gradle.properties` para utilizar o JDK 21 do Android Studio (`C:/Program Files/Android/Android Studio/jbr`) e o Android SDK local.
+2. Clique em **Open** e selecione a pasta.
+3. O Gradle já está pré-configurado em `gradle.properties` para utilizar o JDK 21 do Android Studio e o Android SDK local.
 
 ### 3. Onde Editar Cada Parte (Dicas de Estudo)
 - **Quer mudar as cores ou o visual dos botões/cards?**
