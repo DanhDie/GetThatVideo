@@ -1,0 +1,33 @@
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### IntelliJ IDEA / Android Studio ###
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+local.properties
+captures/
+.navigation/
+.externalNativeBuild/
+.cxx/
+
+### Kotlin ###
+.kotlin/
+
+### Python Backend ###
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+backend/downloads/
+downloads/
+
+### macOS / Windows ###
+.DS_Store
+Thumbs.db
